@@ -3,3 +3,19 @@
   margin: 0;
   padding: 0;
 }
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.memory__grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.cards {
+  min-height: 150px;
+  min-width: 150px;
+}

@@ -1,0 +1,1 @@
+const cardsContainer = document.querySelector('.memory__grid');
