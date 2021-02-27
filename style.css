@@ -45,3 +45,17 @@ section {
   width: 100%;
   background-color: #222;
 }
+
+.card__guessed {
+  position: relative;
+}
+
+.card__guessed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #333;
+}
