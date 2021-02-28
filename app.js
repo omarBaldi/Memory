@@ -121,14 +121,22 @@ function startGame() {
                if (firstCardIndex === secondCardIndex) {
                 cardsGuessed = [...cardsGuessed, firstCard, secondCard];
                 [...cardsClicked].forEach(cardClicked => cardClicked.classList.add(classGuessed));
-               } else {
-                   alert('oops!');
-                   [...cardsClicked].forEach(cardClicked => cardClicked.classList.add(classHide));
+                cardsClicked = [];
+
+                if (cardsGuessed.length === cardsData.length) {
+                    alert("You won!")
+                    return;
                 }
 
-               cardsClicked = [];
+               } else {
+                   setTimeout(() => {
+                    [...cardsClicked].forEach(cardClicked => {
+                        cardClicked.classList.add(classHide)
+                    });
+                    cardsClicked = [];
+                   }, 500);
+                }
             }
-
 
         });
     })
